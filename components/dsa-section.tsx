@@ -49,6 +49,13 @@ export function DsaSection() {
         >
           <span className="text-balance">Algorithms & Data Structures</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          Strong foundation in DSA with active practice on competitive
+          programming platforms, focused on writing optimized, efficient
+          solutions.
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {dsaCards.map((card, index) => (
             <div

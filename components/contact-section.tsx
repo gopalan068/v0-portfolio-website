@@ -35,6 +35,12 @@ export function ContactSection() {
         >
           <span className="text-balance">Get In Touch</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          {"Let's"} build something amazing together. Feel free to reach out for
+          collaboration, opportunities, or just to say hello.
+        </p>
         <div
           className={`grid items-start gap-12 md:grid-cols-2 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >

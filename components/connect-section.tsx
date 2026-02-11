@@ -26,6 +26,11 @@ export function ConnectSection() {
         >
           <span className="text-balance">{"Let's Connect"}</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          Find me online and explore my work.
+        </p>
         <div
           className={`grid gap-6 md:grid-cols-2 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >

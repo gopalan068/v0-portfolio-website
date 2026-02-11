@@ -68,6 +68,12 @@ export function SkillsSection() {
         >
           <span className="text-balance">Technologies & Tools</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          A curated collection of technologies I work with daily to build
+          reliable, efficient software.
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skillCategories.map((category, catIndex) => (
             <div

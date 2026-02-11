@@ -53,6 +53,12 @@ export function LearningSection() {
         >
           <span className="text-balance">Continuous Learning Journey</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          Continuously expanding my technical horizons by exploring emerging
+          technologies and modern architectural patterns.
+        </p>
         <div className="grid gap-6 md:grid-cols-3">
           {learningCards.map((card, index) => (
             <div

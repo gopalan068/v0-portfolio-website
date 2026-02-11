@@ -83,6 +83,12 @@ export function ProjectsSection() {
         >
           <span className="text-balance">Featured Work</span>
         </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          A selection of projects that showcase my technical skills and
+          problem-solving abilities.
+        </p>
         <div className="grid gap-8 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
