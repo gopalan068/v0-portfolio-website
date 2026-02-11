@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { BarChart3, Server, Link2 } from "lucide-react"
 
 const experienceCards = [
@@ -43,12 +42,17 @@ export function ExperienceSection() {
   return (
     <section id="experience" ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="05. EXPERIENCE"
-          title="Data Visualization & System Design"
-          description="Building data-driven applications with robust backend architecture and intuitive frontend interfaces."
-        />
-
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">Data Visualization & System Design</span>
+        </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          Building data-driven applications with robust backend architecture and
+          intuitive frontend interfaces.
+        </p>
         <div className="grid gap-6 md:grid-cols-3">
           {experienceCards.map((card, index) => (
             <div

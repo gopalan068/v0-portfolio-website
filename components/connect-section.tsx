@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { Github, Linkedin, ArrowUpRight } from "lucide-react"
 
 export function ConnectSection() {
@@ -22,12 +21,16 @@ export function ConnectSection() {
   return (
     <section ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="07. CONNECT"
-          title="Let's Connect"
-          description="Find me online and explore my work."
-        />
-
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">{"Let's Connect"}</span>
+        </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          Find me online and explore my work.
+        </p>
         <div
           className={`grid gap-6 md:grid-cols-2 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >

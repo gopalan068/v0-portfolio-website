@@ -3,7 +3,6 @@
 import React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { Mail, Github, Linkedin, Send } from "lucide-react"
 
 export function ContactSection() {
@@ -31,12 +30,17 @@ export function ContactSection() {
   return (
     <section id="contact" ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="08. CONTACT"
-          title="Get In Touch"
-          description="Let's build something amazing together. Feel free to reach out for collaboration, opportunities, or just to say hello."
-        />
-
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">Get In Touch</span>
+        </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          {"Let's"} build something amazing together. Feel free to reach out for
+          collaboration, opportunities, or just to say hello.
+        </p>
         <div
           className={`grid items-start gap-12 md:grid-cols-2 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
@@ -107,7 +111,7 @@ export function ContactSection() {
               </h3>
               <div className="flex flex-col gap-5">
                 <a
-                  href="mailto:gopalan@example.com"
+                  href="mailto:gopalan0555@gmail.com"
                   className="group flex items-center gap-4 text-muted-foreground transition-colors hover:text-primary"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary transition-colors group-hover:bg-primary/10">
@@ -116,7 +120,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm font-medium text-foreground">Email</p>
                     <p className="text-xs text-muted-foreground">
-                      gopalan@example.com
+                      gopalan0555@gmail.com
                     </p>
                   </div>
                 </a>

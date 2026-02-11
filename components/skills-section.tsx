@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
+
 
 const skillCategories = [
   {
@@ -63,12 +63,17 @@ export function SkillsSection() {
   return (
     <section id="skills" ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="02. SKILLS"
-          title="Technologies & Tools"
-          description="A curated collection of technologies I work with daily to build reliable, efficient software."
-        />
-
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">Technologies & Tools</span>
+        </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          A curated collection of technologies I work with daily to build
+          reliable, efficient software.
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skillCategories.map((category, catIndex) => (
             <div

@@ -50,7 +50,7 @@ export function Navigation() {
           href="#hero"
           className="text-lg font-bold text-primary transition-colors hover:text-primary/80"
         >
-          {"<Gopalan />"}
+          Home
         </a>
 
         {/* Desktop Navigation */}

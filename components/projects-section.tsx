@@ -1,8 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
-import { ExternalLink, Github, FileCode2, LayoutDashboard, Code2 } from "lucide-react"
+import { FileCode2, LayoutDashboard, Code2 } from "lucide-react"
 
 const projects = [
   {
@@ -79,12 +78,17 @@ export function ProjectsSection() {
   return (
     <section id="projects" ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="04. PROJECTS"
-          title="Featured Work"
-          description="A selection of projects that showcase my technical skills and problem-solving abilities."
-        />
-
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">Featured Work</span>
+        </h2>
+        <p
+          className={`mx-auto mb-12 max-w-2xl text-center text-base leading-relaxed text-muted-foreground transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          A selection of projects that showcase my technical skills and
+          problem-solving abilities.
+        </p>
         <div className="grid gap-8 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
@@ -94,20 +98,11 @@ export function ProjectsSection() {
             >
               {/* Header */}
               <div className="border-b border-border p-6">
-                <div className="mb-4 flex items-center justify-between">
+                <div className="mb-4">
                   <project.icon
                     size={28}
                     className="text-primary transition-all group-hover:drop-shadow-[0_0_6px_hsl(var(--primary))]"
                   />
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                    aria-label={`View ${project.title} on GitHub`}
-                  >
-                    <Github size={20} />
-                  </a>
                 </div>
                 <h3 className="mb-1 text-xl font-bold text-foreground">
                   {project.title}
@@ -144,7 +139,7 @@ export function ProjectsSection() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-border bg-secondary px-2.5 py-0.5 font-mono text-[10px] text-muted-foreground"
+                      className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-xs font-medium text-primary"
                     >
                       {t}
                     </span>
@@ -152,18 +147,7 @@ export function ProjectsSection() {
                 </div>
               </div>
 
-              {/* Footer */}
-              <div className="border-t border-border p-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-secondary py-2.5 text-sm font-medium text-foreground transition-all hover:bg-primary hover:text-primary-foreground"
-                >
-                  <ExternalLink size={14} />
-                  View on GitHub
-                </a>
-              </div>
+
             </div>
           ))}
         </div>
