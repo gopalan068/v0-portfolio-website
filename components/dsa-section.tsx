@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { Lightbulb, Trophy, Zap, BrainCircuit } from "lucide-react"
 
 const dsaCards = [
@@ -45,12 +44,6 @@ export function DsaSection() {
   return (
     <section ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="03. PROBLEM SOLVING"
-          title="Algorithms & Data Structures"
-          description="Strong foundation in DSA with active practice on competitive programming platforms, focused on writing optimized, efficient solutions."
-        />
-
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {dsaCards.map((card, index) => (
             <div

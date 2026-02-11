@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { Cloud, BrainCircuit, Rocket } from "lucide-react"
 
 const learningCards = [
@@ -49,12 +48,6 @@ export function LearningSection() {
   return (
     <section ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading
-          label="06. LEARNING"
-          title="Continuous Learning Journey"
-          description="Continuously expanding my technical horizons by exploring emerging technologies and modern architectural patterns."
-        />
-
         <div className="grid gap-6 md:grid-cols-3">
           {learningCards.map((card, index) => (
             <div

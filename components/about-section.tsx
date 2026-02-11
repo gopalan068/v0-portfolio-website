@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { SectionHeading } from "./section-heading"
 import { Code2, Database, Layout, Terminal } from "lucide-react"
 
 const highlights = [
@@ -35,8 +34,6 @@ export function AboutSection() {
   return (
     <section id="about" ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
-        <SectionHeading label="01. ABOUT ME" title="Who I Am" />
-
         <div
           className={`grid items-start gap-12 md:grid-cols-2 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >

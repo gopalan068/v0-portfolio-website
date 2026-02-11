@@ -32,8 +32,8 @@ export function HeroSection() {
         <div
           className={`transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
-          <p className="mb-4 font-mono text-sm tracking-widest text-primary">
-            HELLO, I AM
+          <p className="mb-2 font-mono text-lg tracking-widest text-primary">
+            Hello, I am
           </p>
         </div>
 
@@ -42,8 +42,7 @@ export function HeroSection() {
         >
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
             <span className="text-balance">
-              Building Efficient &{" "}
-              <span className="text-primary">Scalable</span> Software Solutions
+              Gopalan S
             </span>
           </h1>
         </div>
