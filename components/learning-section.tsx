@@ -48,6 +48,11 @@ export function LearningSection() {
   return (
     <section ref={sectionRef} className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
+        <h2
+          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="text-balance">Continuous Learning Journey</span>
+        </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {learningCards.map((card, index) => (
             <div

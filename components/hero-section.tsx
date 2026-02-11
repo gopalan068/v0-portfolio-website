@@ -51,7 +51,7 @@ export function HeroSection() {
           className={`transition-all delay-200 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Full-Stack Developer | Python & Java Specialist | Problem Solver
+            Full-Stack Developer | Python Specialist | Problem Solver
           </p>
         </div>
 
