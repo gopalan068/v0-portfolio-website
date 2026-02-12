@@ -40,8 +40,8 @@ export function Navigation() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "glass border-b border-primary/10"
-          : "bg-transparent"
+        ? "glass border-b border-primary/10"
+        : "bg-transparent"
         }`}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
@@ -49,7 +49,7 @@ export function Navigation() {
           href="#hero"
           className="relative text-lg font-bold text-primary transition-all duration-300 hover:drop-shadow-[0_0_12px_hsl(var(--primary))] group"
         >
-          <span className="relative z-10">&lt;Gopalan/&gt;</span>
+          <span className="relative z-10">&lt; Gopalan/&gt;</span>
           <div className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-primary/50 transition-all duration-300 group-hover:w-full" />
         </a>
 
@@ -60,14 +60,14 @@ export function Navigation() {
               <a
                 href={link.href}
                 className={`group relative text-sm font-medium transition-colors duration-300 ${activeSection === link.href.replace("#", "")
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-primary"
                   }`}
               >
                 {link.label}
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-primary/50 transition-all duration-300 ${activeSection === link.href.replace("#", "")
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
+                  ? "w-full"
+                  : "w-0 group-hover:w-full"
                   }`} />
               </a>
             </li>
@@ -94,8 +94,8 @@ export function Navigation() {
                 <a
                   href={link.href}
                   className={`relative block rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 hover:text-primary group ${activeSection === link.href.replace("#", "")
-                      ? "text-primary bg-primary/5"
-                      : "text-muted-foreground"
+                    ? "text-primary bg-primary/5"
+                    : "text-muted-foreground"
                     }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
