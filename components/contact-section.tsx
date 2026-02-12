@@ -164,6 +164,7 @@ export function ContactSection() {
                   </div>
                 </a>
               </div>
+              </div>
             </div>
 
             <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
