@@ -42,10 +42,12 @@ export function DsaSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px]">
+    <section ref={sectionRef} className="relative px-6 py-20 md:py-28 overflow-hidden">
+      {/* Background gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background via-background to-primary/5 opacity-50" />
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <h2
-          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+          className={`mb-12 text-center text-3xl font-bold gradient-text animate-gradient-text md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
           <span className="text-balance">Algorithms & Data Structures</span>
         </h2>
@@ -60,19 +62,29 @@ export function DsaSection() {
           {dsaCards.map((card, index) => (
             <div
               key={card.title}
-              className={`group rounded-xl border border-border bg-card p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)] ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className={`group relative rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-depth ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <card.icon
-                size={28}
-                className="mb-4 text-primary transition-all group-hover:drop-shadow-[0_0_6px_hsl(var(--primary))]"
-              />
-              <h3 className="mb-2 text-base font-semibold text-foreground">
-                {card.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {card.description}
-              </p>
+              {/* Background layers */}
+              <div className="absolute inset-0 bg-gradient-to-br from-card via-card/80 to-background/40 opacity-90" />
+              <div className="absolute inset-0 glass opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 border border-primary/10 rounded-2xl transition-all duration-500 group-hover:border-primary/20 group-hover:shadow-inner-glow" />
+              
+              <div className="relative z-10 p-6">
+                <div className="mb-4 relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+                  <card.icon
+                    size={28}
+                    className="relative z-10 text-primary transition-transform duration-300 group-hover:scale-125"
+                  />
+                </div>
+                <h3 className="mb-2 text-base font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  {card.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground/80 group-hover:text-muted-foreground transition-colors duration-300">
+                  {card.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

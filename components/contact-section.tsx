@@ -28,10 +28,12 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px]">
+    <section id="contact" ref={sectionRef} className="relative px-6 py-20 md:py-28 overflow-hidden">
+      {/* Background gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background opacity-50" />
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <h2
-          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+          className={`mb-12 text-center text-3xl font-bold gradient-text animate-gradient-text md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
           <span className="text-balance">Get In Touch</span>
         </h2>
@@ -58,7 +60,7 @@ export function ContactSection() {
                 id="name"
                 name="name"
                 required
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                className="w-full rounded-xl border border-primary/20 bg-card/50 glass px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all duration-300 hover:border-primary/30"
                 placeholder="Your name"
               />
             </div>
@@ -74,7 +76,7 @@ export function ContactSection() {
                 id="email"
                 name="email"
                 required
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                className="w-full rounded-xl border border-primary/20 bg-card/50 glass px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all duration-300 hover:border-primary/30"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -90,22 +92,27 @@ export function ContactSection() {
                 name="message"
                 rows={4}
                 required
-                className="w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                className="w-full resize-none rounded-xl border border-primary/20 bg-card/50 glass px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all duration-300 hover:border-primary/30"
                 placeholder="Tell me about your project or opportunity..."
               />
             </div>
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+              className="group relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-primary/80 px-6 py-3 text-sm font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:shadow-glow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send size={16} />
-              {isSubmitted ? "Message Sent!" : "Send Message"}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/50 to-primary/30 opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+              <Send size={16} className="relative z-10" />
+              <span className="relative z-10">{isSubmitted ? "Message Sent!" : "Send Message"}</span>
             </button>
           </form>
 
           {/* Contact Info */}
           <div className="flex flex-col gap-6">
-            <div className="rounded-xl border border-border bg-card p-8">
+            <div className="relative rounded-2xl overflow-hidden border border-primary/10 p-8 group transition-all duration-500 hover:border-primary/20 hover:shadow-inner-glow">
+              {/* Background layers */}
+              <div className="absolute inset-0 bg-gradient-to-br from-card via-card/80 to-background/40 opacity-90" />
+              <div className="absolute inset-0 glass opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="relative z-10">
               <h3 className="mb-6 text-lg font-bold text-foreground">
                 Other Ways to Reach Me
               </h3>

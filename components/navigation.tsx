@@ -41,16 +41,17 @@ export function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
+          ? "glass border-b border-primary/10"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
         <a
           href="#hero"
-          className="text-lg font-bold text-primary transition-colors hover:text-primary/80"
+          className="relative text-lg font-bold text-primary transition-all duration-300 hover:drop-shadow-[0_0_12px_hsl(var(--primary))] group"
         >
-          Home
+          <span className="relative z-10">Home</span>
+          <div className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-primary/50 transition-all duration-300 group-hover:w-full" />
         </a>
 
         {/* Desktop Navigation */}
@@ -59,13 +60,18 @@ export function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`group relative text-sm font-medium transition-colors duration-300 ${
                   activeSection === link.href.replace("#", "")
                     ? "text-primary"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground hover:text-primary"
                 }`}
               >
                 {link.label}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-primary/50 transition-all duration-300 ${
+                  activeSection === link.href.replace("#", "")
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
+                }`} />
               </a>
             </li>
           ))}
@@ -84,20 +90,21 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-md md:hidden">
-          <ul className="flex flex-col gap-1 px-6 py-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
+        <div className="border-b border-primary/10 bg-gradient-to-b from-background/95 to-background/90 backdrop-blur-md md:hidden animate-slide-in-down">
+          <ul className="flex flex-col gap-2 px-6 py-4">
+            {navLinks.map((link, index) => (
+              <li key={link.href} style={{ animationDelay: `${index * 0.05}s` }} className="animate-fade-in-up">
                 <a
                   href={link.href}
-                  className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-card hover:text-primary ${
+                  className={`relative block rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 hover:text-primary group ${
                     activeSection === link.href.replace("#", "")
-                      ? "text-primary"
+                      ? "text-primary bg-primary/5"
                       : "text-muted-foreground"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  <span className="relative z-10">{link.label}</span>
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 to-primary/0 opacity-0 transition-all duration-300 group-hover:from-primary/10 group-hover:to-primary/5 group-hover:opacity-100" />
                 </a>
               </li>
             ))}
