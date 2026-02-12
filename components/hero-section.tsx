@@ -162,9 +162,8 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-0 w-full text-center animate-bounce">
         <div className="flex flex-col items-center gap-2">
-          <ArrowDown size={20} className="text-primary animate-glow" />
           <p className="text-xs uppercase tracking-widest text-muted-foreground">Scroll to explore</p>
         </div>
       </div>
