@@ -49,7 +49,7 @@ export function Navigation() {
           href="#hero"
           className="relative text-lg font-bold text-primary transition-all duration-300 hover:drop-shadow-[0_0_12px_hsl(var(--primary))] group"
         >
-          <span className="relative z-10">&lt; Gopalan/&gt;</span>
+          <span className="relative z-10">&lt; Gopalan /&gt;</span>
           <div className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-primary/50 transition-all duration-300 group-hover:w-full" />
         </a>
 
