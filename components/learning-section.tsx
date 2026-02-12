@@ -93,6 +93,7 @@ export function LearningSection() {
                     </li>
                   ))}
                 </ul>
+              </div>
             </div>
           ))}
         </div>
