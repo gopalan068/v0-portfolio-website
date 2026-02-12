@@ -83,7 +83,7 @@ export function HeroSection() {
         <div
           className={`transition-all delay-100 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
-          <h1 className="mb-4 text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
+          <h1 className="mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-5xl font-black leading-tight tracking-tight text-transparent md:text-7xl animate-gradient-text">
             <span className="text-balance">
               Gopalan S
             </span>
@@ -121,45 +121,52 @@ export function HeroSection() {
         >
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+            className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-[hsl(var(--primary))] px-8 py-3 text-sm font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-110 hover:shadow-glow-lg"
           >
-            View Projects
+            <span className="relative z-10">View Projects</span>
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/50 to-[hsl(var(--primary))]/50 opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg border border-primary px-8 py-3 text-sm font-semibold text-primary transition-transform hover:scale-105 hover:bg-primary/10"
+            className="group relative inline-flex items-center gap-2 rounded-lg border border-primary/50 px-8 py-3 text-sm font-bold text-primary transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-glow"
           >
-            Contact Me
+            <span>Contact Me</span>
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 to-primary/0 opacity-0 transition-all duration-300 group-hover:from-primary/10 group-hover:to-primary/5 group-hover:opacity-100" />
           </a>
         </div>
 
         <div
-          className={`mt-10 flex items-center justify-center gap-6 transition-all delay-500 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+          className={`mt-10 flex items-center justify-center gap-8 transition-all delay-500 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
           <a
             href="https://github.com/gopalan068"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground transition-all hover:text-primary hover:drop-shadow-[0_0_8px_hsl(var(--primary))]"
+            className="group relative p-2 text-muted-foreground transition-all duration-300 hover:text-primary"
             aria-label="GitHub Profile"
           >
-            <Github size={22} />
+            <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-primary/0 to-primary/0 opacity-0 blur transition-all duration-300 group-hover:from-primary/20 group-hover:to-primary/10 group-hover:opacity-100" />
+            <Github size={24} className="relative z-10 transition-transform duration-300 group-hover:scale-125 group-hover:drop-shadow-lg" />
           </a>
           <a
             href="https://www.linkedin.com/in/gopalan-s-a5bb9b2a6"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground transition-all hover:text-primary hover:drop-shadow-[0_0_8px_hsl(var(--primary))]"
+            className="group relative p-2 text-muted-foreground transition-all duration-300 hover:text-primary"
             aria-label="LinkedIn Profile"
           >
-            <Linkedin size={22} />
+            <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-primary/0 to-primary/0 opacity-0 blur transition-all duration-300 group-hover:from-primary/20 group-hover:to-primary/10 group-hover:opacity-100" />
+            <Linkedin size={24} className="relative z-10 transition-transform duration-300 group-hover:scale-125 group-hover:drop-shadow-lg" />
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown size={20} className="text-muted-foreground" />
+        <div className="flex flex-col items-center gap-2">
+          <ArrowDown size={20} className="text-primary animate-glow" />
+          <p className="text-xs uppercase tracking-widest text-muted-foreground">Scroll to explore</p>
+        </div>
       </div>
     </section>
   )

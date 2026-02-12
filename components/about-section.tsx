@@ -32,10 +32,12 @@ export function AboutSection() {
   }, [])
 
   return (
-    <section id="about" ref={sectionRef} className="px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px]">
+    <section id="about" ref={sectionRef} className="relative px-6 py-20 md:py-28 overflow-hidden">
+      {/* Background gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/5 to-background opacity-50" />
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <h2
-          className={`mb-12 text-center text-3xl font-bold text-foreground md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+          className={`mb-12 text-center text-3xl font-bold gradient-text animate-gradient-text md:text-4xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
         >
           <span className="text-balance">Who I Am</span>
         </h2>
@@ -65,19 +67,29 @@ export function AboutSection() {
             {highlights.map((item, index) => (
               <div
                 key={item.label}
-                className={`group rounded-xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)] ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-                style={{ transitionDelay: `${(index + 1) * 150}ms` }}
+                className={`group relative rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-depth ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                style={{ transitionDelay: `${(index + 1) * 100}ms` }}
               >
-                <item.icon
-                  size={24}
-                  className="mb-3 text-primary transition-all group-hover:drop-shadow-[0_0_6px_hsl(var(--primary))]"
-                />
-                <p className="mb-1 text-sm font-semibold text-foreground">
-                  {item.label}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {item.description}
-                </p>
+                {/* Background layers */}
+                <div className="absolute inset-0 bg-gradient-to-br from-card via-card/80 to-background/40 opacity-90" />
+                <div className="absolute inset-0 glass opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 border border-primary/10 rounded-2xl transition-all duration-500 group-hover:border-primary/20 group-hover:shadow-inner-glow" />
+                
+                <div className="relative z-10 p-5">
+                  <div className="mb-3 relative">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+                    <item.icon
+                      size={24}
+                      className="relative z-10 text-primary transition-transform duration-300 group-hover:scale-125"
+                    />
+                  </div>
+                  <p className="mb-1 text-sm font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {item.label}
+                  </p>
+                  <p className="text-xs text-muted-foreground/80 group-hover:text-muted-foreground transition-colors duration-300">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
