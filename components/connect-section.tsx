@@ -47,7 +47,7 @@ export function ConnectSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-card via-card/80 to-background/40 opacity-90" />
             <div className="absolute inset-0 glass opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="absolute inset-0 border border-primary/10 rounded-2xl transition-all duration-500 group-hover:border-primary/20 group-hover:shadow-inner-glow" />
-            
+
             <div className="relative z-10 flex flex-col items-center">
               <div className="mb-5 relative">
                 <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
@@ -84,7 +84,7 @@ export function ConnectSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-card via-card/80 to-background/40 opacity-90" />
             <div className="absolute inset-0 glass opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="absolute inset-0 border border-primary/10 rounded-2xl transition-all duration-500 group-hover:border-primary/20 group-hover:shadow-inner-glow" />
-            
+
             <div className="relative z-10 flex flex-col items-center">
               <div className="mb-5 relative">
                 <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
@@ -103,10 +103,11 @@ export function ConnectSection() {
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary/80 group-hover:text-primary transition-colors duration-300">
                 Connect on LinkedIn
                 <ArrowUpRight
-                size={16}
-                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </span>
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </span>
+            </div>
           </a>
         </div>
       </div>
