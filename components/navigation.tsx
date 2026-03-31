@@ -60,8 +60,8 @@ export function Navigation() {
               <a
                 href={link.href}
                 className={`group relative text-sm font-medium transition-colors duration-300 ${activeSection === link.href.replace("#", "")
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-primary"
+                  ? "text-[#ffe5e5]"
+                  : "text-muted-foreground hover:text-[#ffe5e5]"
                   }`}
               >
                 {link.label}
@@ -93,8 +93,8 @@ export function Navigation() {
               <li key={link.href} style={{ animationDelay: `${index * 0.05}s` }} className="animate-fade-in-up">
                 <a
                   href={link.href}
-                  className={`relative block rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 hover:text-primary group ${activeSection === link.href.replace("#", "")
-                    ? "text-primary bg-primary/5"
+                  className={`relative block rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 hover:text-[#ffe5e5] group ${activeSection === link.href.replace("#", "")
+                    ? "text-[#ffe5e5] bg-[#ffe5e5]/10"
                     : "text-muted-foreground"
                     }`}
                   onClick={() => setIsMobileMenuOpen(false)}

@@ -51,6 +51,8 @@
     --indigo: 226 20% 53%;
     /* Softer hover color for natural look */
     --hover: 0 0% 95%; /* very light neutral gray */
+    /* Active/Select color */
+    --accent-select: 0 10% 95%; /* light pink #ffe5e5 */
   }
 }
 
