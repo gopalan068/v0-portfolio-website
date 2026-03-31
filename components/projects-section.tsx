@@ -1,62 +1,62 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { FileCode2, LayoutDashboard, Code2 } from "lucide-react"
+import { ExternalLink, Lock, BookOpen, CheckCircle2 } from "lucide-react"
 
 const projects = [
   {
-    icon: FileCode2,
+    icon: Lock,
+    title: "Authentication App",
+    subtitle: "User Authentication System",
+    description:
+      "A comprehensive authentication application featuring secure user registration and login functionality. Built with modern web technologies to demonstrate best practices in user authentication, session management, and security.",
+    features: [
+      "User registration & login system",
+      "Secure password hashing",
+      "Session management",
+      "Form validation",
+      "Responsive UI design",
+    ],
+    tech: ["HTML", "CSS", "JavaScript", "Authentication"],
+    impact:
+      "Demonstrates solid understanding of authentication flows and user security best practices.",
+    link: "https://gopalan068.github.io/authentication-app/",
+  },
+  {
+    icon: BookOpen,
     title: "BlogHub",
     subtitle: "Full-Stack Blogging Platform",
     description:
-      "Developed a feature-rich blogging platform using Flask and SQL that enables users to create accounts, publish blog posts, and engage with community content. Implements secure authentication with password hashing, session management, and RESTful API design patterns.",
+      "A feature-rich blogging platform where users can create, read, and manage blog posts. Deployed on Render with a complete backend system handling data storage and user interactions.",
     features: [
-      "User authentication with bcrypt encryption",
-      "Complete CRUD operations for blog management",
-      "Search & filter system by tags and authors",
-      "Comment system with moderation",
-      "SQL query optimization with indexing",
+      "Create and publish blog posts",
+      "Read and browse blogs",
+      "User-friendly interface",
+      "Database-backed storage",
+      "Responsive design",
     ],
-    tech: ["Flask", "Python", "SQLAlchemy", "SQLite", "Jinja2", "Bootstrap", "Bcrypt"],
+    tech: ["Node.js", "Express", "MongoDB", "EJS", "CSS"],
     impact:
-      "Demonstrates full-stack development expertise with emphasis on security best practices and database optimization.",
-    github: "https://github.com/gopalan068/bloghub",
+      "Showcases full-stack web development capabilities with backend-frontend integration and database management.",
+    link: "https://blog-hub-if48.onrender.com/",
   },
   {
-    icon: LayoutDashboard,
-    title: "TaskFlow",
-    subtitle: "Project Management Dashboard",
+    icon: CheckCircle2,
+    title: "Todo App",
+    subtitle: "Task Management Application",
     description:
-      "Built an interactive project management dashboard using Flask and SQL to track tasks, deadlines, and team productivity. Features real-time data visualization, priority-based task sorting, and analytics charts for project insights.",
+      "A clean and intuitive todo application for managing daily tasks and productivity. Enables users to create, mark complete, and organize their tasks efficiently with a simple yet effective interface.",
     features: [
-      "Interactive Kanban-style task board",
-      "Priority and deadline-based filtering",
-      "Data visualization with Chart.js",
-      "Role-based access control",
-      "Export reports to CSV/PDF",
+      "Add and manage tasks",
+      "Mark tasks as complete",
+      "Delete completed tasks",
+      "Local storage support",
+      "Clean, intuitive UI",
     ],
-    tech: ["Flask", "Python", "MySQL", "Chart.js", "AJAX", "Bootstrap", "SQLAlchemy"],
+    tech: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
     impact:
-      "Showcases ability to build data-driven applications with complex state management and user-friendly interfaces.",
-    github: "https://github.com/gopalan068/taskflow",
-  },
-  {
-    icon: Code2,
-    title: "CodeSnippet Manager",
-    subtitle: "Developer Productivity Tool",
-    description:
-      "Created a code snippet management application for developers to store, organize, and search reusable code blocks. Features syntax highlighting, tag-based categorization, and quick-copy functionality for improved workflow efficiency.",
-    features: [
-      "Syntax highlighting for 20+ languages",
-      "Advanced search with regex matching",
-      "Tag-based categorization and filtering",
-      "One-click copy-to-clipboard",
-      "Share snippets via unique URLs",
-    ],
-    tech: ["Flask", "Python", "SQLite", "Prism.js", "JavaScript", "REST API", "Jinja2"],
-    impact:
-      "Demonstrates understanding of developer experience (DX) and building productivity tools with clean UI/UX.",
-    github: "https://github.com/gopalan068/codesnippet-manager",
+      "Demonstrates ability to build practical applications with focus on user experience and functionality.",
+    link: "https://github.com/gopalan068/todo-app",
   },
 ]
 
@@ -144,7 +144,7 @@ export function ProjectsSection() {
                 </p>
 
                 {/* Tech stack */}
-                <div className="mt-auto flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, idx) => (
                     <span
                       key={t}
@@ -156,6 +156,17 @@ export function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+
+                {/* View Project Button */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full rounded-lg bg-gradient-to-r from-primary/80 to-primary/60 hover:from-primary hover:to-primary/80 text-primary-foreground px-4 py-2.5 font-semibold text-sm transition-all duration-300 hover:shadow-lg"
+                >
+                  View Project
+                  <ExternalLink size={16} />
+                </a>
               </div>
               </div>
             </div>
