@@ -50,7 +50,7 @@
     --sapphire: 200 30% 60%;
     --indigo: 226 20% 53%;
     /* Softer hover color for natural look */
-    --hover: 40 35% 92%; /* very light warm cream */
+    --hover: 0 0% 95%; /* very light neutral gray */
   }
 }
 
