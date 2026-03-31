@@ -17,7 +17,7 @@ const projects = [
       "Form validation",
       "Responsive UI design",
     ],
-    tech: ["HTML", "CSS", "JavaScript", "Authentication"],
+    tech: ["NODE JS", "EXPRESS", "BCRYPT", "REACT"],
     impact:
       "Demonstrates solid understanding of authentication flows and user security best practices.",
     link: "https://gopalan068.github.io/authentication-app/",
@@ -35,7 +35,7 @@ const projects = [
       "Database-backed storage",
       "Responsive design",
     ],
-    tech: ["Node.js", "Express", "MongoDB", "EJS", "CSS"],
+    tech: ["PYTHON", "FLASK", "MongoDB", "JavaScript", "CSS", "JINJA2"],
     impact:
       "Showcases full-stack web development capabilities with backend-frontend integration and database management.",
     link: "https://blog-hub-if48.onrender.com/",
@@ -53,7 +53,7 @@ const projects = [
       "Local storage support",
       "Clean, intuitive UI",
     ],
-    tech: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
+    tech: ["HTML", "CSS", "PYTHON", "FLASK",  "CRUD FUNCTIONALITY"],
     impact:
       "Demonstrates ability to build practical applications with focus on user experience and functionality.",
     link: "https://github.com/gopalan068/todo-app",
