@@ -286,16 +286,14 @@
 /* Glassmorphism utilities */
 .glass {
   backdrop-filter: blur(10px);
-  background: rgba(10, 25, 47, 0.5);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
-
 .glass-light {
   backdrop-filter: blur(8px);
-  background: rgba(15, 35, 65, 0.4);
-  border: 1px solid rgba(100, 255, 218, 0.05);
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 /* Enhanced shadows */
 .shadow-glow {
   box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
