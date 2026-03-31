@@ -10,45 +10,45 @@
 
 @layer base {
   :root {
-    --background: 213 56% 11%;
-    --foreground: 213 60% 94%;
-    --card: 213 44% 16%;
-    --card-foreground: 213 60% 94%;
-    --popover: 213 44% 16%;
-    --popover-foreground: 213 60% 94%;
-    --primary: 166 100% 70%;
-    --primary-foreground: 213 56% 11%;
-    --secondary: 213 44% 20%;
-    --secondary-foreground: 213 60% 94%;
-    --muted: 213 30% 22%;
-    --muted-foreground: 213 20% 55%;
-    --accent: 166 100% 70%;
-    --accent-foreground: 213 56% 11%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 40 30% 94%; /* warm beige */
+    --foreground: 30 20% 20%; /* deep brown */
+    --card: 60 20% 98%; /* light sand */
+    --card-foreground: 30 20% 20%;
+    --popover: 60 20% 98%;
+    --popover-foreground: 30 20% 20%;
+    --primary: 120 27% 45%; /* muted green */
+    --primary-foreground: 40 30% 94%;
+    --secondary: 200 30% 85%; /* soft blue */
+    --secondary-foreground: 30 20% 20%;
+    --muted: 90 10% 80%; /* pale olive */
+    --muted-foreground: 120 10% 35%;
+    --accent: 25 60% 60%; /* earthy orange */
+    --accent-foreground: 40 30% 94%;
+    --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 98%;
-    --border: 213 30% 22%;
-    --input: 213 30% 22%;
-    --ring: 166 100% 70%;
-    --chart-1: 166 100% 70%;
-    --chart-2: 213 60% 94%;
-    --chart-3: 197 37% 44%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 30 15% 70%;
+    --input: 30 15% 70%;
+    --ring: 120 27% 45%;
+    --chart-1: 120 27% 45%;
+    --chart-2: 200 30% 85%;
+    --chart-3: 90 10% 80%;
+    --chart-4: 25 60% 60%;
+    --chart-5: 40 30% 94%;
     --radius: 0.75rem;
-    --sidebar-background: 213 56% 11%;
-    --sidebar-foreground: 213 60% 94%;
-    --sidebar-primary: 166 100% 70%;
-    --sidebar-primary-foreground: 213 56% 11%;
-    --sidebar-accent: 213 44% 16%;
-    --sidebar-accent-foreground: 213 60% 94%;
-    --sidebar-border: 213 30% 22%;
-    --sidebar-ring: 166 100% 70%;
+    --sidebar-background: 40 30% 94%;
+    --sidebar-foreground: 30 20% 20%;
+    --sidebar-primary: 120 27% 45%;
+    --sidebar-primary-foreground: 40 30% 94%;
+    --sidebar-accent: 60 20% 98%;
+    --sidebar-accent-foreground: 30 20% 20%;
+    --sidebar-border: 30 15% 70%;
+    --sidebar-ring: 120 27% 45%;
     /* Modern accent colors */
-    --purple: 270 100% 60%;
-    --violet: 280 85% 60%;
-    --emerald: 160 84% 42%;
-    --sapphire: 200 100% 50%;
-    --indigo: 226 100% 53%;
+    --purple: 270 30% 50%;
+    --violet: 280 25% 55%;
+    --emerald: 120 27% 45%;
+    --sapphire: 200 30% 60%;
+    --indigo: 226 20% 53%;
   }
 }
 
